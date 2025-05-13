@@ -1,0 +1,1 @@
+# machship-mcp-config
