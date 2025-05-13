@@ -1,0 +1,99 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MachShip Full API Spec",
+    "description": "OpenAPI 3.0 specification for MachShip integration with Abacus.AI MCP and CodeLLM",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://live.machship.com/apiv2"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/consignments/createConsignment": {
+      "post": {
+        "summary": "Create a new consignment",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/consignments/editUnmanifestedConsignment": {
+      "post": {
+        "summary": "Edit unmanifested consignment",
+        "responses": {
+          "200": {
+            "description": "Edited"
+          }
+        }
+      }
+    },
+    "/consignments/getRecentlyCreatedOrUpdatedConsignments": {
+      "post": {
+        "summary": "Fetch recently updated consignments",
+        "responses": {
+          "200": {
+            "description": "Fetched"
+          }
+        }
+      }
+    },
+    "/attachments/uploadAttachments": {
+      "post": {
+        "summary": "Upload attachments",
+        "responses": {
+          "200": {
+            "description": "Uploaded"
+          }
+        }
+      }
+    },
+    "/attachments/getAttachmentsByConsignmentIds": {
+      "post": {
+        "summary": "Get attachments by consignment ID",
+        "responses": {
+          "200": {
+            "description": "Fetched"
+          }
+        }
+      }
+    },
+    "/companies/getAvailableCarriersAccountsAndServices": {
+      "post": {
+        "summary": "Fetch available carrier services",
+        "responses": {
+          "200": {
+            "description": "Fetched"
+          }
+        }
+      }
+    },
+    "/authenticate/ping": {
+      "post": {
+        "summary": "Ping server authentication status",
+        "responses": {
+          "200": {
+            "description": "Pong"
+          }
+        }
+      }
+    }
+  }
+}
